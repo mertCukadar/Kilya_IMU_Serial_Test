@@ -1,0 +1,11 @@
+CONFIG_IDF_TARGET="esp32c3"
+CONFIG_FREERTOS_HZ=1000
+
+# Radio off: Bluetooth disabled; Wi-Fi is never started (the library is not even linked)
+CONFIG_BT_ENABLED=n
+
+# Lower CPU clock
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_80=y
+
+# Keep the brownout detector ON: a brownout reset is then reported at boot
+CONFIG_ESP_BROWNOUT_DET=y
